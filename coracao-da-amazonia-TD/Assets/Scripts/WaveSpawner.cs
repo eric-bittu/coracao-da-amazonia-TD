@@ -11,7 +11,7 @@ public class WaveSpawner : MonoBehaviour
     //tempo entre o final de uma onda e o inicio da proxima
     public float timeBetweenWaves = 5f;
     //contador inicial da primeira onda
-    private float countdown = 2f;
+    private float countdown = 20f;
 
     //texto da contagem regressiva entre as ondas
     public TextMeshProUGUI waveCountdownText;
