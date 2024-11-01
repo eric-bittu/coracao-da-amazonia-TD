@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c7bf638b4169d4fa77d6e929850291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpCount: {fileID: 0}
+  hpCount: {fileID: 203902960}
   vida: 100
   gameOver: 0
 --- !u!1 &1173709216
