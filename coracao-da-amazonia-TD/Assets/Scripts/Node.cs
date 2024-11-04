@@ -5,6 +5,9 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
+    public Vector3 positionOffset;
+
+    private GameObject arqueiro;
 
     private Renderer rend;
     private Color startColor;
@@ -14,14 +17,21 @@ public class Node : MonoBehaviour
         startColor = rend.material.color;
     }
 
+    void OnMouseDown()
+    {
+        if (arqueiro != null)
+        {
+            Debug.Log("Não da pra construir ai!");
+            return;
+        }
+
+        GameObject arqueiroToBuild = BuildManager.instance.GetArqueiroToBuild();
+        arqueiro = (GameObject)Instantiate(arqueiroToBuild, transform.position + positionOffset, transform.rotation);
+    }
+
     void OnMouseEnter()
     {
         rend.material.color = hoverColor;
-    }
-
-    private void OnMouseDown()
-    {
-        
     }
 
     void OnMouseExit()
